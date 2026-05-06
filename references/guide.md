@@ -85,6 +85,7 @@ timeout 60s ace "deferred capability discovery exposes matched tools in the next
    ```bash
    auggie login
    ```
+   Alternatively, for **ace relay** services, modify `~/.augment/session.json` with relay-specific `accessToken` (e.g., `ace_...`), `tenantURL` (relay endpoint), and `scopes: ["email"]`.
 
 2. **Verify workspace path**
    Ensure the `-w` path points to the **project root directory**.

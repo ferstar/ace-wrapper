@@ -4,13 +4,25 @@ Semantic codebase retrieval using the Augment Context Engine through a small `ac
 
 Use it when the relevant identifiers are unknown and the query is about behavior, intent, architecture, or data flow. Treat results as candidate files, then read the returned files and confirm exact identifiers or call sites with literal search.
 
-## Prerequisites
+## Authentication
 
-Authenticate the Augment CLI before searching:
+Before searching, you must authenticate using **one** of the following methods:
+
+### Method 1: Standard Login (Official)
+
+If you have an official Augment account:
 
 ```bash
 auggie login
 ```
+
+### Method 2: ACE Relay (Alternative)
+
+If you use an `ace relay` middleman service, you can **skip** `auggie login` by manually configuring `~/.augment/session.json` with relay-specific settings:
+
+- `accessToken`: Use the relay token (e.g., starts with `ace_`).
+- `tenantURL`: Change to the relay endpoint (e.g., `https://acemcp.heroman.wtf/relay/`).
+- `scopes`: Typically set to `["email"]`.
 
 ## Install
 
