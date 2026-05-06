@@ -48,3 +48,14 @@ timeout 60s ace "config loading" -w /path/to/project/root --verbose
 - Use literal search for exact identifiers, error strings, routes, events, and config keys.
 
 More usage guidance lives in [references/guide.md](references/guide.md).
+
+## Release
+
+Publishing is handled by GitHub Actions. Create and push a version tag to build, publish to PyPI, and create a GitHub Release:
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+The PyPI publish job uses Trusted Publishing, so the PyPI project must allow the `ferstar/ace-wrapper` repository and the `pypi` GitHub environment.

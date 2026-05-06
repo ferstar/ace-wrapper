@@ -4,9 +4,26 @@ dynamic = ["version"]
 description = "Augment Context Engine (ACE) Wrapper"
 readme = "README.md"
 requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "ferstar", email = "zhangjianfei3@gmail.com" },
+]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
 dependencies = [
     "auggie-sdk>=0.1.12",
 ]
+
+[project.urls]
+Documentation = "https://github.com/ferstar/ace-wrapper#readme"
+Issues = "https://github.com/ferstar/ace-wrapper/issues"
+Source = "https://github.com/ferstar/ace-wrapper"
 
 [project.scripts]
 ace = "ace_wrapper.query:main"
