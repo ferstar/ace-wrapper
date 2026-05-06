@@ -78,7 +78,7 @@ To investigate code effectively:
 4. Use exact search (`grep`/`rg`) to confirm identifiers, event names, tests, call sites, or every occurrence.
 5. If results are weak, retry with a different behavior/data-flow query, then use exact search as fallback.
 
-For agent prompt files such as `AGENTS.md`, `CLAUDE.md`, or `GEMINI.md`, keep the rule short: run ACE for open-ended code discovery, verify by reading files, and use exact search for proof.
+For project-level agent instructions (e.g., `AGENTS.md`, `CLAUDE.md`, or `GEMINI.md`), use the detailed snippet from the [Install](#install-for-ai-coding-agents) section. A comprehensive rule ensures the agent correctly balances semantic search with literal verification.
 
 ## Query Guidance
 
