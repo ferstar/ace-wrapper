@@ -32,8 +32,14 @@ uv tool install /path/to/ace-wrapper
 
 Agent instruction snippet:
 
-```text
-Use `timeout 60s ace "<query>" -w <repo-root>` before literal grep when the task is about behavior, intent, architecture, data flow, or unknown identifiers. Treat ACE output only as candidate files. Read the returned files, then use exact search to confirm identifiers, routes, events, tests, and call sites.
+```markdown
+### ACE Semantic Search
+- Use `ace` for intent-based or open-ended codebase search: `timeout 60s ace "query" -w <repo-root>`.
+- If you do not know the exact keywords (debugging, explorations, "where is X?"), run `ace` before `rg`.
+- Treat `ace` as a candidate-file generator, not a proof source. After it returns results, read the relevant files and use exact search to confirm identifiers or call sites.
+- Split unrelated questions into separate `ace` queries.
+- Do not treat "results found" as evidence that a feature exists. Verify existence from code before concluding.
+- Prefer queries that describe behavior and data flow, not just nouns: include user action, runtime boundary, expected effect, and any known payload fields.
 ```
 
 ## Quick Reference
