@@ -32,14 +32,8 @@ uv tool install /path/to/ace-wrapper
 
 Agent instruction snippet:
 
-```markdown
-### ACE Semantic Search
-- Use `ace` for intent-based or open-ended codebase search: `timeout 60s ace "query" -w <repo-root>`.
-- If you do not know the exact keywords (debugging, explorations, "where is X?"), run `ace` before `rg`.
-- Treat `ace` as a candidate-file generator, not a proof source. After it returns results, read the relevant files and use exact search to confirm identifiers or call sites.
-- Split unrelated questions into separate `ace` queries.
-- Do not treat "results found" as evidence that a feature exists. Verify existence from code before concluding.
-- Prefer queries that describe behavior and data flow, not just nouns: include user action, runtime boundary, expected effect, and any known payload fields.
+```text
+Use `timeout 60s ace "<query>" -w <repo-root>` for semantic codebase discovery. See references/prompts.md for detailed prompt guidance.
 ```
 
 ## Quick Reference
@@ -78,7 +72,7 @@ To investigate code effectively:
 4. Use exact search (`grep`/`rg`) to confirm identifiers, event names, tests, call sites, or every occurrence.
 5. If results are weak, retry with a different behavior/data-flow query, then use exact search as fallback.
 
-For project-level agent instructions (e.g., `AGENTS.md`, `CLAUDE.md`, or `GEMINI.md`), use the detailed snippet from the [Install](#install-for-ai-coding-agents) section. A comprehensive rule ensures the agent correctly balances semantic search with literal verification.
+For project-level agent instructions (e.g., `AGENTS.md`, `CLAUDE.md`, or `GEMINI.md`), refer to [references/prompts.md](references/prompts.md) for a comprehensive rule template.
 
 ## Query Guidance
 
@@ -97,4 +91,5 @@ For project-level agent instructions (e.g., `AGENTS.md`, `CLAUDE.md`, or `GEMINI
 ## Reference Materials
 
 - `references/guide.md` - Detailed usage patterns and troubleshooting
+- `references/prompts.md` - AI Agent prompt guidance and templates
 - [Official SDK Docs](https://docs.augmentcode.com/context-services/sdk/overview#filesystem-context)

@@ -55,17 +55,7 @@ timeout 60s ace "config loading" -w /path/to/project/root --verbose
 
 ## AI Agent Integration
 
-To use `ace` effectively with AI coding agents, add the following guidance to your agent's prompt instructions (e.g., in `.cursorrules`, `CLAUDE.md`, or `GEMINI.md`):
-
-```markdown
-### ACE Semantic Search
-- Use `ace` for intent-based or open-ended codebase search: `timeout 60s ace "query" -w <repo-root>`.
-- If you do not know the exact keywords (debugging, explorations, "where is X?"), run `ace` before `rg`.
-- Treat `ace` as a candidate-file generator, not a proof source. After it returns results, read the relevant files and use exact search to confirm identifiers or call sites.
-- Split unrelated questions into separate `ace` queries.
-- Do not treat "results found" as evidence that a feature exists. Verify existence from the code before concluding.
-- Prefer queries that describe behavior and data flow, not just nouns: include user action, runtime boundary, expected effect, and any known payload fields.
-```
+To use `ace` effectively with AI coding agents, refer to [references/prompts.md](references/prompts.md) for recommended prompt instructions and best practices.
 
 ## Reliability Boundaries
 
@@ -74,7 +64,7 @@ To use `ace` effectively with AI coding agents, add the following guidance to yo
 - Split unrelated workflows into separate queries.
 - Use literal search for exact identifiers, error strings, routes, events, and config keys.
 
-More usage guidance lives in [references/guide.md](references/guide.md).
+Detailed usage guidance and AI Agent prompt templates live in [references/](references/).
 
 ## Release
 
