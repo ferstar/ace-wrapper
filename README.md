@@ -71,8 +71,8 @@ Detailed usage guidance and AI Agent prompt templates live in [references/](refe
 Publishing is handled by GitHub Actions. Create and push a version tag to build, publish to PyPI, and create a GitHub Release:
 
 ```bash
-git tag v0.1.0
-git push origin v0.1.0
+git tag v0.1.1
+git push origin v0.1.1
 ```
 
 The PyPI publish job uses Trusted Publishing, so the PyPI project must allow the `ferstar/ace-wrapper` repository and the `pypi` GitHub environment.
