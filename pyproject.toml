@@ -1,0 +1,22 @@
+[project]
+name = "ace-wrapper"
+dynamic = ["version"]
+description = "Augment Context Engine (ACE) Wrapper"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "auggie-sdk>=0.1.12",
+]
+
+[project.scripts]
+ace = "ace_wrapper.query:main"
+
+[tool.hatch.version]
+path = "ace_wrapper/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ace_wrapper"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
