@@ -33,16 +33,16 @@ uv tool install /path/to/ace-wrapper
 Agent instruction snippet:
 
 ```text
-Use `timeout 60s ace "<query>" -w <repo-root>` for semantic codebase discovery. See references/prompts.md for detailed prompt guidance.
+Use `timeout 120s ace "<query>" -w <repo-root>` for semantic codebase discovery. See references/prompts.md for detailed prompt guidance.
 ```
 
 ## Quick Reference
 
 | Action | Command |
 | :--- | :--- |
-| Search current directory | `timeout 60s ace "<query>"` |
-| Search specific project root | `timeout 60s ace "<query>" -w <path_to_root>` |
-| Debug mode | `timeout 60s ace "<query>" -w <path_to_root> --verbose` |
+| Search current directory | `timeout 120s ace "<query>"` |
+| Search specific project root | `timeout 120s ace "<query>" -w <path_to_root>` |
+| Debug mode | `timeout 120s ace "<query>" -w <path_to_root> --verbose` |
 
 Note: Semantic search may take longer than literal search; always use an explicit timeout when calling from agents or scripts.
 

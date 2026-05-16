@@ -7,31 +7,31 @@ ACE is best used as semantic retrieval: it finds likely files and code sections 
 ### Conceptual Queries
 ```bash
 # Understanding architecture
-timeout 60s ace "How does the authentication flow work?" -w /path/to/project/root
-timeout 60s ace "What is the request lifecycle in this application?" -w /path/to/project/root
-timeout 60s ace "How are database transactions handled?" -w /path/to/project/root
+timeout 120s ace "How does the authentication flow work?" -w /path/to/project/root
+timeout 120s ace "What is the request lifecycle in this application?" -w /path/to/project/root
+timeout 120s ace "How are database transactions handled?" -w /path/to/project/root
 
 # Finding implementations
-timeout 60s ace "Where is the S3 upload logic located?" -w /path/to/project/root
-timeout 60s ace "Find where uploaded files are validated, stored, and attached to messages" -w /path/to/project/root
-timeout 60s ace "How are user permissions validated before tool execution?" -w /path/to/project/root
+timeout 120s ace "Where is the S3 upload logic located?" -w /path/to/project/root
+timeout 120s ace "Find where uploaded files are validated, stored, and attached to messages" -w /path/to/project/root
+timeout 120s ace "How are user permissions validated before tool execution?" -w /path/to/project/root
 
 # Cross-language queries (Chinese to English code)
-timeout 60s ace "用户登录流程在哪里实现" -w /path/to/project/root
-timeout 60s ace "后台任务调度是怎么配置的" -w /path/to/project/root
+timeout 120s ace "用户登录流程在哪里实现" -w /path/to/project/root
+timeout 120s ace "后台任务调度是怎么配置的" -w /path/to/project/root
 ```
 
 ### Workspace Management
 
 ```bash
 # Search current directory (default)
-timeout 60s ace "authentication logic"
+timeout 120s ace "authentication logic"
 
 # Search specific project root
-timeout 60s ace "payment processing" -w /path/to/project/root
+timeout 120s ace "payment processing" -w /path/to/project/root
 
 # Debug mode for troubleshooting
-timeout 60s ace "config loading" -w /path/to/project/root --verbose
+timeout 120s ace "config loading" -w /path/to/project/root --verbose
 ```
 
 ## Recommended Workflow
@@ -45,7 +45,7 @@ timeout 60s ace "config loading" -w /path/to/project/root --verbose
 Example:
 
 ```bash
-timeout 60s ace "user uploads an unsupported file and should see skipped-file feedback" -w /repo
+timeout 120s ace "user uploads an unsupported file and should see skipped-file feedback" -w /repo
 rg -n "unsupported|skipped|upload|file" /repo
 ```
 
@@ -62,12 +62,12 @@ Avoid cramming unrelated questions into one query. Run separate queries for sepa
 
 ```bash
 # Good: one coherent workflow
-timeout 60s ace "message composer sends text files workspace and requestId to backend and starts a processing job" -w /repo
+timeout 120s ace "message composer sends text files workspace and requestId to backend and starts a processing job" -w /repo
 
 # Better as separate queries, not one mixed request
-timeout 60s ace "recover missed user data directory migration" -w /repo
-timeout 60s ace "package publishing skips symlinks and dotfiles" -w /repo
-timeout 60s ace "deferred capability discovery exposes matched tools in the next model request" -w /repo
+timeout 120s ace "recover missed user data directory migration" -w /repo
+timeout 120s ace "package publishing skips symlinks and dotfiles" -w /repo
+timeout 120s ace "deferred capability discovery exposes matched tools in the next model request" -w /repo
 ```
 
 ## Reliability Boundaries

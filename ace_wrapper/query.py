@@ -24,9 +24,9 @@ def main() -> None:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  timeout 60s ace "How is the authentication flow implemented?" -w /path/to/project/root
-  timeout 60s ace "Find where uploaded files are validated and stored" -w /path/to/project/root
-  timeout 60s ace "frontend sends requestId to backend and starts a processing job" -w /path/to/project/root
+  timeout 120s ace "How is the authentication flow implemented?" -w /path/to/project/root
+  timeout 120s ace "Find where uploaded files are validated and stored" -w /path/to/project/root
+  timeout 120s ace "frontend sends requestId to backend and starts a processing job" -w /path/to/project/root
 
 Exit codes:
   0: Success (results found)

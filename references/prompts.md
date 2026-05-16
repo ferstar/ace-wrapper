@@ -6,7 +6,7 @@ To use `ace` effectively with AI coding agents (like Antigravity, Claude Enginee
 
 ```markdown
 ### ACE Semantic Search
-- Use `ace` for intent-based or open-ended codebase search: `timeout 60s ace "query" -w <repo-root>`.
+- Use `ace` for intent-based or open-ended codebase search: `timeout 120s ace "query" -w <repo-root>`.
 - If you do not know the exact keywords (debugging, explorations, "where is X?"), run `ace` before `rg`.
 - Treat `ace` as a candidate-file generator, not a proof source. After it returns results, read the relevant files and use exact search to confirm identifiers or call sites.
 - Split unrelated questions into separate `ace` queries.

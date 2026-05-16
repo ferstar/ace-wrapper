@@ -41,15 +41,15 @@ uv tool install ace-wrapper
 ## Usage
 
 ```bash
-timeout 60s ace "How is the authentication flow implemented?" -w /path/to/project/root
-timeout 60s ace "Find where uploaded files are validated and stored" -w /path/to/project/root
-timeout 60s ace "用户登录流程在哪里实现" -w /path/to/project/root
+timeout 120s ace "How is the authentication flow implemented?" -w /path/to/project/root
+timeout 120s ace "Find where uploaded files are validated and stored" -w /path/to/project/root
+timeout 120s ace "用户登录流程在哪里实现" -w /path/to/project/root
 ```
 
 Use `--verbose` for debug logs:
 
 ```bash
-timeout 60s ace "config loading" -w /path/to/project/root --verbose
+timeout 120s ace "config loading" -w /path/to/project/root --verbose
 ```
 
 
